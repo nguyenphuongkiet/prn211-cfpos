@@ -46,6 +46,19 @@
           }
         }
       },
+      "FluentValidation/11.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
         "type": "package",
         "compile": {
@@ -943,7 +956,7 @@
           }
         }
       },
-      "Repository/1.0.0": {
+      "Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -953,10 +966,10 @@
           "Microsoft.Extensions.Configuration.Json": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/Repository.dll": {}
+          "bin/placeholder/Services.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Repository.dll": {}
+          "bin/placeholder/Services.dll": {}
         }
       }
     }
@@ -994,6 +1007,29 @@
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml",
         "pkgicon.png"
+      ]
+    },
+    "FluentValidation/11.5.2": {
+      "sha512": "kj/hW/iusp2zq1Vt1YPLgDj6UG0DhoJXGkLwjLwm3j7vUtRF8DVA5vHJfItG3BxDjLWJUR2pvw8fK7rnuysZNA==",
+      "type": "package",
+      "path": "fluentvalidation/11.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.5.2.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
@@ -2532,15 +2568,16 @@
         "version.txt"
       ]
     },
-    "Repository/1.0.0": {
+    "Services/1.0.0": {
       "type": "project",
-      "path": "../Service/Repository.csproj",
-      "msbuildProject": "../Service/Repository.csproj"
+      "path": "../Service/Services.csproj",
+      "msbuildProject": "../Service/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "Repository >= 1.0.0"
+      "FluentValidation >= 11.5.2",
+      "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2570,8 +2607,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Repository.csproj": {
-              "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Repository.csproj"
+            "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj": {
+              "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj"
             }
           }
         }
@@ -2585,6 +2622,12 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.5.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
