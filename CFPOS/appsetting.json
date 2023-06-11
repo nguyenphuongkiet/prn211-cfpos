@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "POSDB": "server =(local); database=POS;uid=sa;pwd=12345;TrustServerCertificate=True"
+  }
+}
