@@ -33,8 +33,8 @@ namespace CFPOS
             {
                 //login success
                 this.Hide();
-                Form menu = new Menu();
-                menu.ShowDialog();
+                Form employee = new EmployeeMenu();
+                employee.ShowDialog();
             }
             else
             {
