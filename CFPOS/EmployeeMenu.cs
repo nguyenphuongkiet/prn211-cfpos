@@ -41,80 +41,62 @@ namespace CFPOS
 
             // Add event handler for SelectedIndexChanged event
             cboCategory.SelectedIndexChanged += CboCategory_SelectedIndexChanged;
+            cboItem.SelectedIndexChanged += CboItem_SelectedIndexChanged;
 
             var selectedCategoryId = ((Category)cboCategory.SelectedItem).Id;
             cboItem.DataSource = itemRepository.getAll().Where(a => a.CategoryId == selectedCategoryId).ToList();
             cboItem.DisplayMember = "Name";
             cboItem.ValueMember = "Id";
+            cboItem.SelectedIndex = 0;
+            var selectedItemId = ((Item)cboItem.SelectedItem).Id;
+
+            // Retrieve the selected item's price from the database using the item ID
+            var selectedItem = itemRepository.getItemById(selectedItemId);
+            var price = selectedItem.Price;
+
+            txtPrice.Text = price.ToString();
         }
 
         private void CboCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedCategoryId = ((Category)cboCategory.SelectedItem).Id;
-            cboItem.DataSource = itemRepository.getAll().Where(a => a.CategoryId == selectedCategoryId).ToList();
+            if (cboCategory.SelectedItem != null)
+            {
+                var selectedCategoryId = ((Category)cboCategory.SelectedItem).Id;
+                cboItem.DataSource = itemRepository.getAll().Where(a => a.CategoryId == selectedCategoryId).ToList();
+            }
         }
-
-
-        private void LoadOrderDetails()
+        private void CboItem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            orderDetailRepository = new OrderDetailRepository();
-            // Query database to retrieve order details for the specified table ID
-            // Bind the retrieved data to the DataGridView control
-            DataSet dataSet = new DataSet();
-            DataTable table = new DataTable();
-            table.Columns.Add("Id", typeof(int));
-            table.Columns.Add("Name");
-            table.Columns.Add("Price");
-            table.Columns.Add("Quantity");
-            dataSet.Tables.Add(table);
-            dgvOrder.DataSource = dataSet.Tables[0];
-
-            /*          dgvOrder.DataSource = new BindingSource() { DataSource = orderDetailRepository };
-            */
-        }
-
-        private void btnTable1_Click(object sender, EventArgs e)
-        {
-            if (btnTable1.BackColor == Color.White)
-                btnTable1.BackColor = Color.Gray;
-            LoadOrderDetails();
-
-        }
-        private void btnTable2_Click(object sender, EventArgs e)
-        {
-            if (btnTable2.BackColor == Color.White)
-                btnTable2.BackColor = Color.Gray;
-        }
-        private void btnTable3_Click(object sender, EventArgs e)
-        {
-            if (btnTable3.BackColor == Color.White)
-                btnTable3.BackColor = Color.Gray;
-        }
-        private void btnTable4_Click(object sender, EventArgs e)
-        {
-            if (btnTable4.BackColor == Color.White)
-                btnTable4.BackColor = Color.Gray;
-        }
-        private void btnTable5_Click(object sender, EventArgs e)
-        {
-            if (btnTable5.BackColor == Color.White)
-                btnTable5.BackColor = Color.Gray;
-        }
-        private void btnTable6_Click(object sender, EventArgs e)
-        {
-            if (btnTable6.BackColor == Color.White)
-                btnTable6.BackColor = Color.Gray;
+            if (cboItem.SelectedItem != null)
+            {
+                var selectedItemId = ((Item)cboItem.SelectedItem).Id;
+                var selectedItem = itemRepository.getItemById(selectedItemId);
+                var price = selectedItem.Price;
+                txtPrice.Text = price.ToString();
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            OrderDetail orderDetail = new OrderDetail();
-            int item = cboItem.SelectedIndex;
-            int quantity = (int)nudQuantity.Value;
+            // Retrieve selected values
+            string category = cboCategory.SelectedItem.ToString();
+            string item = cboItem.SelectedItem.ToString();
+            string note = txtNote.Text;
+            decimal price = decimal.Parse(txtPrice.Text);
+            int quantity = int.Parse(nudQuantity.Value.ToString());
+            decimal total = price * quantity;
 
-            orderDetail.Quantity = quantity;
-            orderDetail.ItemId = item;
-            orderDetailRepository.create(orderDetail);
+            // Add row to DataGridView
+            dgvOrder.Rows.Add(item, price, quantity, total, note);
+
+            // Sum the total of the bill
+            decimal sum = 0;
+            for (int i = 0; i < dgvOrder.Rows.Count; i++)
+            {
+                sum += decimal.Parse(dgvOrder.Rows[i].Cells[3].Value.ToString());
+            }
+
+            txtTotal.Text = sum.ToString();
         }
 
         private void PayButton_Click(object sender, EventArgs e)

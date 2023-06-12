@@ -27,12 +27,12 @@ namespace Services.Models
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Schedule> Schedules { get; set; }
         public virtual DbSet<Status> Statuses { get; set; }
-        public virtual DbSet<Table> Tables { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer(GetConnectionString());
             }
         }
@@ -88,13 +88,13 @@ namespace Services.Models
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Accounts)
                     .HasForeignKey(d => d.RoleId)
-                    .HasConstraintName("FK__Account__role_id__48CFD27E");
+                    .HasConstraintName("FK__Account__role_id__46E78A0C");
             });
 
             modelBuilder.Entity<AccountSchedule>(entity =>
             {
                 entity.HasKey(e => new { e.AccountId, e.ScheduleId })
-                    .HasName("PK__AccountS__AAE48A6B609887C3");
+                    .HasName("PK__AccountS__AAE48A6BD6D7BE80");
 
                 entity.ToTable("AccountSchedule");
 
@@ -106,13 +106,13 @@ namespace Services.Models
                     .WithMany(p => p.AccountSchedules)
                     .HasForeignKey(d => d.AccountId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__AccountSc__accou__49C3F6B7");
+                    .HasConstraintName("FK__AccountSc__accou__47DBAE45");
 
                 entity.HasOne(d => d.Schedule)
                     .WithMany(p => p.AccountSchedules)
                     .HasForeignKey(d => d.ScheduleId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__AccountSc__sched__4AB81AF0");
+                    .HasConstraintName("FK__AccountSc__sched__48CFD27E");
             });
 
             modelBuilder.Entity<Category>(entity =>
@@ -153,7 +153,7 @@ namespace Services.Models
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Items)
                     .HasForeignKey(d => d.CategoryId)
-                    .HasConstraintName("FK__Item__category_i__47DBAE45");
+                    .HasConstraintName("FK__Item__category_i__45F365D3");
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -168,26 +168,19 @@ namespace Services.Models
 
                 entity.Property(e => e.StatusId).HasColumnName("status_id");
 
-                entity.Property(e => e.TableId).HasColumnName("table_id");
-
                 entity.Property(e => e.TotalMoney)
-                    .HasColumnType("decimal(10, 3)")
+                    .HasColumnType("decimal(10, 0)")
                     .HasColumnName("total_money");
 
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.EmployeeId)
-                    .HasConstraintName("FK__Orders__employee__4BAC3F29");
+                    .HasConstraintName("FK__Orders__employee__49C3F6B7");
 
                 entity.HasOne(d => d.Status)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.StatusId)
-                    .HasConstraintName("FK__Orders__status_i__4CA06362");
-
-                entity.HasOne(d => d.Table)
-                    .WithMany(p => p.Orders)
-                    .HasForeignKey(d => d.TableId)
-                    .HasConstraintName("FK__Orders__table_id__4D94879B");
+                    .HasConstraintName("FK__Orders__status_i__4AB81AF0");
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
@@ -196,6 +189,10 @@ namespace Services.Models
 
                 entity.Property(e => e.ItemId).HasColumnName("item_id");
 
+                entity.Property(e => e.Note)
+                    .HasMaxLength(100)
+                    .HasColumnName("note");
+
                 entity.Property(e => e.OrderId).HasColumnName("order_id");
 
                 entity.Property(e => e.Quantity).HasColumnName("quantity");
@@ -203,12 +200,12 @@ namespace Services.Models
                 entity.HasOne(d => d.Item)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.ItemId)
-                    .HasConstraintName("FK__OrderDeta__item___4F7CD00D");
+                    .HasConstraintName("FK__OrderDeta__item___4CA06362");
 
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
-                    .HasConstraintName("FK__OrderDeta__order__4E88ABD4");
+                    .HasConstraintName("FK__OrderDeta__order__4BAC3F29");
             });
 
             modelBuilder.Entity<Role>(entity =>
@@ -248,13 +245,6 @@ namespace Services.Models
                 entity.Property(e => e.Status1)
                     .HasMaxLength(50)
                     .HasColumnName("status");
-            });
-
-            modelBuilder.Entity<Table>(entity =>
-            {
-                entity.Property(e => e.Id).HasColumnName("ID");
-
-                entity.Property(e => e.TableId).HasColumnName("table_id");
             });
 
             OnModelCreatingPartial(modelBuilder);

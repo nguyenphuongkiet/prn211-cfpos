@@ -12,3 +12,17 @@ D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\Service\
 D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\Service\obj\Debug\net6.0\Services.pdb
 D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\Service\obj\Debug\net6.0\Services.genruntimeconfig.cache
 D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\Service\obj\Debug\net6.0\ref\Services.dll
+D:\Back-END .NET\prn211-cfpos\Service\bin\Debug\net6.0\Services.deps.json
+D:\Back-END .NET\prn211-cfpos\Service\bin\Debug\net6.0\Services.runtimeconfig.json
+D:\Back-END .NET\prn211-cfpos\Service\bin\Debug\net6.0\Services.dll
+D:\Back-END .NET\prn211-cfpos\Service\bin\Debug\net6.0\Services.pdb
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\Services.AssemblyInfo.cs
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\Services.dll
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\refint\Services.dll
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\Services.pdb
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\Services.genruntimeconfig.cache
+D:\Back-END .NET\prn211-cfpos\Service\obj\Debug\net6.0\ref\Services.dll
