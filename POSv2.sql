@@ -1,7 +1,11 @@
 use master;
+GO
 drop database POS;
+GO
 create database POS;
+GO
 use POS;
+GO
 
 create table Category (
 	ID int identity(1,1) primary key,

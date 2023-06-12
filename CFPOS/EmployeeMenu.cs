@@ -19,7 +19,7 @@ namespace CFPOS
         ItemRepository itemRepository;
         OrderDetailRepository orderDetailRepository;
         OrderRepository orderRepository;
-        TableRepository tableRepository;
+        //TableRepository tableRepository;
         public EmployeeMenu()
         {
             InitializeComponent();
