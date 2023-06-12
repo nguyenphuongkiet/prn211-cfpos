@@ -29,201 +29,281 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnTable6 = new Button();
+            btnTable5 = new Button();
+            btnTable4 = new Button();
+            btnTable3 = new Button();
+            btnTable2 = new Button();
+            btnTable1 = new Button();
             panel2 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvOrder = new DataGridView();
             panel3 = new Panel();
-            panel4 = new Panel();
-            button12 = new Button();
-            button11 = new Button();
-            button10 = new Button();
-            button9 = new Button();
-            button8 = new Button();
-            button7 = new Button();
-            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            label1 = new Label();
-            label2 = new Label();
+            nudQuantity = new NumericUpDown();
             label3 = new Label();
-            numericUpDown1 = new NumericUpDown();
+            label2 = new Label();
+            label1 = new Label();
+            cboItem = new ComboBox();
+            cboCategory = new ComboBox();
+            panel4 = new Panel();
+            btnLogout = new Button();
+            btnExport = new Button();
+            btnInfo = new Button();
+            btnDelete = new Button();
+            btnEdit = new Button();
+            btnAdd = new Button();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvOrder).BeginInit();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudQuantity).BeginInit();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Location = new Point(585, 51);
+            panel1.Controls.Add(btnTable6);
+            panel1.Controls.Add(btnTable5);
+            panel1.Controls.Add(btnTable4);
+            panel1.Controls.Add(btnTable3);
+            panel1.Controls.Add(btnTable2);
+            panel1.Controls.Add(btnTable1);
+            panel1.Location = new Point(315, 24);
+            panel1.Margin = new Padding(2, 1, 2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(976, 338);
+            panel1.Size = new Size(526, 158);
             panel1.TabIndex = 0;
             // 
-            // button6
+            // btnTable6
             // 
-            button6.Location = new Point(726, 176);
-            button6.Name = "button6";
-            button6.Size = new Size(215, 136);
-            button6.TabIndex = 5;
-            button6.Text = "Table 6";
-            button6.UseVisualStyleBackColor = true;
+            btnTable6.BackColor = Color.White;
+            btnTable6.Location = new Point(391, 82);
+            btnTable6.Margin = new Padding(2, 1, 2, 1);
+            btnTable6.Name = "btnTable6";
+            btnTable6.Size = new Size(116, 64);
+            btnTable6.TabIndex = 5;
+            btnTable6.Text = "Table 6";
+            btnTable6.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnTable5
             // 
-            button5.Location = new Point(385, 176);
-            button5.Name = "button5";
-            button5.Size = new Size(215, 136);
-            button5.TabIndex = 4;
-            button5.Text = "Table 5";
-            button5.UseVisualStyleBackColor = true;
+            btnTable5.BackColor = Color.White;
+            btnTable5.Location = new Point(207, 82);
+            btnTable5.Margin = new Padding(2, 1, 2, 1);
+            btnTable5.Name = "btnTable5";
+            btnTable5.Size = new Size(116, 64);
+            btnTable5.TabIndex = 4;
+            btnTable5.Text = "Table 5";
+            btnTable5.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnTable4
             // 
-            button4.Location = new Point(44, 176);
-            button4.Name = "button4";
-            button4.Size = new Size(215, 136);
-            button4.TabIndex = 3;
-            button4.Text = "Table 4";
-            button4.UseVisualStyleBackColor = true;
+            btnTable4.BackColor = Color.White;
+            btnTable4.Location = new Point(24, 82);
+            btnTable4.Margin = new Padding(2, 1, 2, 1);
+            btnTable4.Name = "btnTable4";
+            btnTable4.Size = new Size(116, 64);
+            btnTable4.TabIndex = 3;
+            btnTable4.Text = "Table 4";
+            btnTable4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnTable3
             // 
-            button3.Location = new Point(726, 24);
-            button3.Name = "button3";
-            button3.Size = new Size(215, 136);
-            button3.TabIndex = 2;
-            button3.Text = "Table 3";
-            button3.UseVisualStyleBackColor = true;
+            btnTable3.BackColor = Color.White;
+            btnTable3.Location = new Point(391, 11);
+            btnTable3.Margin = new Padding(2, 1, 2, 1);
+            btnTable3.Name = "btnTable3";
+            btnTable3.Size = new Size(116, 64);
+            btnTable3.TabIndex = 2;
+            btnTable3.Text = "Table 3";
+            btnTable3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnTable2
             // 
-            button2.Location = new Point(385, 24);
-            button2.Name = "button2";
-            button2.Size = new Size(215, 136);
-            button2.TabIndex = 1;
-            button2.Text = "Table 2";
-            button2.UseVisualStyleBackColor = true;
+            btnTable2.BackColor = Color.White;
+            btnTable2.Location = new Point(207, 11);
+            btnTable2.Margin = new Padding(2, 1, 2, 1);
+            btnTable2.Name = "btnTable2";
+            btnTable2.Size = new Size(116, 64);
+            btnTable2.TabIndex = 1;
+            btnTable2.Text = "Table 2";
+            btnTable2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnTable1
             // 
-            button1.Location = new Point(44, 24);
-            button1.Name = "button1";
-            button1.Size = new Size(215, 136);
-            button1.TabIndex = 0;
-            button1.Text = "Table 1";
-            button1.UseVisualStyleBackColor = true;
+            btnTable1.BackColor = Color.White;
+            btnTable1.Location = new Point(24, 11);
+            btnTable1.Margin = new Padding(2, 1, 2, 1);
+            btnTable1.Name = "btnTable1";
+            btnTable1.Size = new Size(116, 64);
+            btnTable1.TabIndex = 0;
+            btnTable1.Text = "Table 1";
+            btnTable1.UseVisualStyleBackColor = false;
+            btnTable1.Click += btnTable1_Click;
             // 
             // panel2
             // 
-            panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(585, 444);
+            panel2.Controls.Add(dgvOrder);
+            panel2.Location = new Point(315, 208);
+            panel2.Margin = new Padding(2, 1, 2, 1);
             panel2.Name = "panel2";
-            panel2.Size = new Size(976, 506);
+            panel2.Size = new Size(526, 237);
             panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvOrder
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(28, 21);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(931, 467);
-            dataGridView1.TabIndex = 0;
+            dgvOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvOrder.Location = new Point(15, 10);
+            dgvOrder.Margin = new Padding(2, 1, 2, 1);
+            dgvOrder.Name = "dgvOrder";
+            dgvOrder.RowHeadersWidth = 82;
+            dgvOrder.RowTemplate.Height = 41;
+            dgvOrder.Size = new Size(501, 219);
+            dgvOrder.TabIndex = 0;
             // 
             // panel3
             // 
-            panel3.Controls.Add(numericUpDown1);
+            panel3.Controls.Add(nudQuantity);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(label1);
-            panel3.Controls.Add(comboBox2);
-            panel3.Controls.Add(comboBox1);
-            panel3.Location = new Point(12, 51);
+            panel3.Controls.Add(cboItem);
+            panel3.Controls.Add(cboCategory);
+            panel3.Location = new Point(6, 24);
+            panel3.Margin = new Padding(2, 1, 2, 1);
             panel3.Name = "panel3";
-            panel3.Size = new Size(501, 338);
+            panel3.Size = new Size(270, 158);
             panel3.TabIndex = 1;
+            // 
+            // nudQuantity
+            // 
+            nudQuantity.Location = new Point(119, 106);
+            nudQuantity.Margin = new Padding(2, 1, 2, 1);
+            nudQuantity.Name = "nudQuantity";
+            nudQuantity.Size = new Size(129, 23);
+            nudQuantity.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(15, 105);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 15);
+            label3.TabIndex = 5;
+            label3.Text = "Quantity";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(15, 68);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(87, 15);
+            label2.TabIndex = 4;
+            label2.Text = "DRINK'S NAME";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(15, 27);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(55, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Category";
+            // 
+            // cboItem
+            // 
+            cboItem.FormattingEnabled = true;
+            cboItem.Location = new Point(118, 65);
+            cboItem.Margin = new Padding(2, 1, 2, 1);
+            cboItem.Name = "cboItem";
+            cboItem.Size = new Size(132, 23);
+            cboItem.TabIndex = 1;
+            // 
+            // cboCategory
+            // 
+            cboCategory.FormattingEnabled = true;
+            cboCategory.Location = new Point(118, 26);
+            cboCategory.Margin = new Padding(2, 1, 2, 1);
+            cboCategory.Name = "cboCategory";
+            cboCategory.Size = new Size(132, 23);
+            cboCategory.TabIndex = 0;
             // 
             // panel4
             // 
-            panel4.Controls.Add(button12);
-            panel4.Controls.Add(button11);
-            panel4.Controls.Add(button10);
-            panel4.Controls.Add(button9);
-            panel4.Controls.Add(button8);
-            panel4.Controls.Add(button7);
-            panel4.Location = new Point(12, 444);
+            panel4.Controls.Add(btnLogout);
+            panel4.Controls.Add(btnExport);
+            panel4.Controls.Add(btnInfo);
+            panel4.Controls.Add(btnDelete);
+            panel4.Controls.Add(btnEdit);
+            panel4.Controls.Add(btnAdd);
+            panel4.Location = new Point(6, 208);
+            panel4.Margin = new Padding(2, 1, 2, 1);
             panel4.Name = "panel4";
-            panel4.Size = new Size(501, 506);
+            panel4.Size = new Size(270, 237);
             panel4.TabIndex = 2;
             // 
-            // button12
+            // btnLogout
             // 
-            button12.Location = new Point(285, 361);
-            button12.Name = "button12";
-            button12.Size = new Size(188, 116);
-            button12.TabIndex = 11;
-            button12.Text = "SIGN OUT";
-            button12.UseVisualStyleBackColor = true;
+            btnLogout.Location = new Point(153, 169);
+            btnLogout.Margin = new Padding(2, 1, 2, 1);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(101, 54);
+            btnLogout.TabIndex = 11;
+            btnLogout.Text = "SIGN OUT";
+            btnLogout.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnExport
             // 
-            button11.Location = new Point(28, 361);
-            button11.Name = "button11";
-            button11.Size = new Size(188, 116);
-            button11.TabIndex = 10;
-            button11.Text = "EXPORT";
-            button11.UseVisualStyleBackColor = true;
+            btnExport.Location = new Point(15, 169);
+            btnExport.Margin = new Padding(2, 1, 2, 1);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(101, 54);
+            btnExport.TabIndex = 10;
+            btnExport.Text = "EXPORT";
+            btnExport.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnInfo
             // 
-            button10.Location = new Point(285, 196);
-            button10.Name = "button10";
-            button10.Size = new Size(188, 116);
-            button10.TabIndex = 9;
-            button10.Text = "INFO EMP";
-            button10.UseVisualStyleBackColor = true;
+            btnInfo.Location = new Point(153, 92);
+            btnInfo.Margin = new Padding(2, 1, 2, 1);
+            btnInfo.Name = "btnInfo";
+            btnInfo.Size = new Size(101, 54);
+            btnInfo.TabIndex = 9;
+            btnInfo.Text = "INFO EMP";
+            btnInfo.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnDelete
             // 
-            button9.Location = new Point(28, 196);
-            button9.Name = "button9";
-            button9.Size = new Size(185, 116);
-            button9.TabIndex = 8;
-            button9.Text = "DELETE";
-            button9.UseVisualStyleBackColor = true;
+            btnDelete.Location = new Point(15, 92);
+            btnDelete.Margin = new Padding(2, 1, 2, 1);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(100, 54);
+            btnDelete.TabIndex = 8;
+            btnDelete.Text = "DELETE";
+            btnDelete.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnEdit
             // 
-            button8.Location = new Point(285, 33);
-            button8.Name = "button8";
-            button8.Size = new Size(188, 116);
-            button8.TabIndex = 7;
-            button8.Text = "EDIT";
-            button8.UseVisualStyleBackColor = true;
+            btnEdit.Location = new Point(153, 15);
+            btnEdit.Margin = new Padding(2, 1, 2, 1);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(101, 54);
+            btnEdit.TabIndex = 7;
+            btnEdit.Text = "EDIT";
+            btnEdit.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnAdd
             // 
-            button7.Location = new Point(28, 33);
-            button7.Name = "button7";
-            button7.Size = new Size(185, 116);
-            button7.TabIndex = 6;
-            button7.Text = "ADD";
-            button7.UseVisualStyleBackColor = true;
+            btnAdd.Location = new Point(15, 15);
+            btnAdd.Margin = new Padding(2, 1, 2, 1);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(100, 54);
+            btnAdd.TabIndex = 6;
+            btnAdd.Text = "ADD";
+            btnAdd.UseVisualStyleBackColor = true;
             // 
             // sqlCommand1
             // 
@@ -232,74 +312,25 @@
             sqlCommand1.Notification = null;
             sqlCommand1.Transaction = null;
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(219, 55);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(242, 40);
-            comboBox1.TabIndex = 0;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(219, 138);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(242, 40);
-            comboBox2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(28, 58);
-            label1.Name = "label1";
-            label1.Size = new Size(110, 32);
-            label1.TabIndex = 3;
-            label1.Text = "Category";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(28, 146);
-            label2.Name = "label2";
-            label2.Size = new Size(176, 32);
-            label2.TabIndex = 4;
-            label2.Text = "DRINK'S NAME";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(28, 225);
-            label3.Name = "label3";
-            label3.Size = new Size(106, 32);
-            label3.TabIndex = 5;
-            label3.Text = "Quantity";
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(221, 226);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(240, 39);
-            numericUpDown1.TabIndex = 6;
-            // 
             // EmployeeMenu
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1594, 982);
+            ClientSize = new Size(829, 456);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "EmployeeMenu";
             Text = "EmployeeMenu";
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvOrder).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudQuantity).EndInit();
             panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
         }
 
@@ -309,25 +340,25 @@
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
-        private Button button6;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private DataGridView dataGridView1;
-        private Button button12;
-        private Button button11;
-        private Button button10;
-        private Button button9;
-        private Button button8;
-        private Button button7;
-        private NumericUpDown numericUpDown1;
+        private Button btnTable6;
+        private Button btnTable5;
+        private Button btnTable4;
+        private Button btnTable3;
+        private Button btnTable2;
+        private Button btnTable1;
+        private DataGridView dgvOrder;
+        private Button btnLogout;
+        private Button btnExport;
+        private Button btnInfo;
+        private Button btnDelete;
+        private Button btnEdit;
+        private Button btnAdd;
+        private NumericUpDown nudQuantity;
         private Label label3;
         private Label label2;
         private Label label1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox cboItem;
+        private ComboBox cboCategory;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
     }
 }
