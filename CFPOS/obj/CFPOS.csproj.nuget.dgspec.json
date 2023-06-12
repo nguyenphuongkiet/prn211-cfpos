@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\CFPOS\\CFPOS.csproj": {}
+    "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\CFPOS\\CFPOS.csproj": {
+    "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\CFPOS\\CFPOS.csproj",
+        "projectUniqueName": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj",
         "projectName": "CFPOS",
-        "projectPath": "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\CFPOS\\CFPOS.csproj",
-        "packagesPath": "C:\\Users\\Quoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\CFPOS\\obj\\",
+        "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Quoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\Service\\Services.csproj": {
-                "projectPath": "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\Service\\Services.csproj"
+              "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj": {
+                "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj"
               }
             }
           }
@@ -72,17 +72,17 @@
         }
       }
     },
-    "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\Service\\Services.csproj": {
+    "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\Service\\Services.csproj",
+        "projectUniqueName": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\Quoc\\source\\repos\\prn211-cfpos\\Service\\Services.csproj",
-        "packagesPath": "C:\\Users\\Quoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quoc\\Source\\Repos\\prn211-cfpos\\Service\\obj\\",
+        "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Quoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
