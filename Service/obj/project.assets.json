@@ -2630,19 +2630,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vsngh\\.nuget\\packages\\": {}
+    "C:\\Users\\Quoc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Back-END .NET\\prn211-cfpos\\Service\\Services.csproj",
+      "projectUniqueName": "C:\\Users\\Quoc\\Source\\Repos\\prn211-cfpos\\Service\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\Back-END .NET\\prn211-cfpos\\Service\\Services.csproj",
-      "packagesPath": "C:\\Users\\vsngh\\.nuget\\packages\\",
-      "outputPath": "D:\\Back-END .NET\\prn211-cfpos\\Service\\obj\\",
+      "projectPath": "C:\\Users\\Quoc\\Source\\Repos\\prn211-cfpos\\Service\\Services.csproj",
+      "packagesPath": "C:\\Users\\Quoc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Quoc\\Source\\Repos\\prn211-cfpos\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vsngh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Quoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
