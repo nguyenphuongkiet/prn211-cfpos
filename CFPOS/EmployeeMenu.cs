@@ -69,8 +69,8 @@ namespace CFPOS
             dataSet.Tables.Add(table);
             dgvOrder.DataSource = dataSet.Tables[0];
 
-/*           dgvOrder.DataSource = new BindingSource() { DataSource = orderDetailRepository };
-*/
+            /*          dgvOrder.DataSource = new BindingSource() { DataSource = orderDetailRepository };
+            */
         }
 
         private void btnTable1_Click(object sender, EventArgs e)
