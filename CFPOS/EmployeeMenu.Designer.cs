@@ -84,6 +84,7 @@
             btnTable6.TabIndex = 5;
             btnTable6.Text = "Table 6";
             btnTable6.UseVisualStyleBackColor = false;
+            btnTable6.Click += btnTable6_Click;
             // 
             // btnTable5
             // 
@@ -95,6 +96,7 @@
             btnTable5.TabIndex = 4;
             btnTable5.Text = "Table 5";
             btnTable5.UseVisualStyleBackColor = false;
+            btnTable5.Click += btnTable5_Click;
             // 
             // btnTable4
             // 
@@ -106,6 +108,7 @@
             btnTable4.TabIndex = 3;
             btnTable4.Text = "Table 4";
             btnTable4.UseVisualStyleBackColor = false;
+            btnTable4.Click += btnTable4_Click;
             // 
             // btnTable3
             // 
@@ -117,6 +120,7 @@
             btnTable3.TabIndex = 2;
             btnTable3.Text = "Table 3";
             btnTable3.UseVisualStyleBackColor = false;
+            btnTable3.Click += btnTable3_Click;
             // 
             // btnTable2
             // 
@@ -128,6 +132,7 @@
             btnTable2.TabIndex = 1;
             btnTable2.Text = "Table 2";
             btnTable2.UseVisualStyleBackColor = false;
+            btnTable2.Click += btnTable2_Click;
             // 
             // btnTable1
             // 
@@ -304,6 +309,7 @@
             btnAdd.TabIndex = 6;
             btnAdd.Text = "ADD";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // sqlCommand1
             // 
