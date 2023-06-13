@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace CFPOS
 {
+
     public partial class Login : Form
     {
+        
         POSContext _context;
         AccountRepository accountService;
         public Login()
@@ -29,12 +31,16 @@ namespace CFPOS
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             var check = accountService.getAll().FirstOrDefault(a => a.Username == username && a.Password == password);
+            int id = check.Id;
+            string name = check.Fullname;
             if (check != null)
             {
                 //login success
                 this.Hide();
-                Form employee = new EmployeeMenu();
+                Form employee = new EmployeeMenu(id, name);
                 employee.ShowDialog();
+                // Set the UserId property to the ID of the logged-in account
+                
             }
             else
             {

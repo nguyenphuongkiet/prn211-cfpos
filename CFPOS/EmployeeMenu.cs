@@ -15,15 +15,22 @@ namespace CFPOS
 {
     public partial class EmployeeMenu : Form
     {
+        private int _id;
+        private string _name;
         CategoryRepository categoryRepository;
         ItemRepository itemRepository;
         OrderDetailRepository orderDetailRepository;
         OrderRepository orderRepository;
-        TableRepository tableRepository;
-        public EmployeeMenu()
+        public EmployeeMenu(int id, string name)
         {
             InitializeComponent();
-
+            //get id of user after login
+            _id = id;
+            //get id of user after login and add to the txtName
+            _name = name;
+            txtEmployeeName.Text = name;
+            //enable the timer 
+            timer1.Enabled = true;
             LoadItems();
 
         }
@@ -87,7 +94,7 @@ namespace CFPOS
             decimal total = price * quantity;
 
             // Add row to DataGridView
-            dgvOrder.Rows.Add(item, price, quantity, total, note);
+            dgvOrder.Rows.Add(item, price, quantity, total, note, category);
 
             // Sum the total of the bill
             decimal sum = 0;
@@ -99,16 +106,207 @@ namespace CFPOS
             txtTotal.Text = sum.ToString();
         }
 
-        private void PayButton_Click(object sender, EventArgs e)
+        private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Create a new Order object
-            // Populate the Order object with necessary information (employee ID, table ID, total money, date, etc.)
-            // Insert the new Order into the database
-            // Iterate through the rows of the DataGridView control and insert each OrderDetail object into the database with the corresponding order ID
-            // Generate a bill or receipt based on the order information and print it out or export it as desired
-            // Reset the table selection and clear the DataGridView control to prepare for the next customer
+            if (e.RowIndex >= 0) // Check if a valid row is selected
+            {
+                // Retrieve the list of all categories and bind it to cboCategory
+                List<Category> categories = categoryRepository.getAll();
+                cboCategory.DisplayMember = "Name";
+                cboCategory.ValueMember = "Id";
+                cboCategory.DataSource = categories;
+
+                DataGridViewRow row = dgvOrder.Rows[e.RowIndex];
+                string name = row.Cells[0].Value.ToString(); // Get the name of the selected item
+
+                // Find the category of the selected item
+                int categoryId = itemRepository.getItemByName(name).CategoryId ?? 0;
+
+                // Set the selected category in cboCategory
+                cboCategory.SelectedValue = categoryId;
+
+                // Bind the items under the selected category to cboItem
+                cboItem.DataSource = itemRepository.getAll().Where(a => a.CategoryId == categoryId).ToList();
+                cboItem.DisplayMember = "Name";
+                cboItem.ValueMember = "Id";
+
+                // Set the selected item in cboItem
+                cboItem.Text = name;
+
+                // Set the price, quantity and note in their respective controls
+                txtPrice.Text = row.Cells[1].Value.ToString();
+                nudQuantity.Value = int.Parse(row.Cells[2].Value.ToString());
+                txtNote.Text = row.Cells[4].Value.ToString();
+
+            }
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            // Retrieve selected values
+            string category = cboCategory.SelectedItem.ToString();
+            string item = cboItem.SelectedItem.ToString();
+            string note = txtNote.Text;
+            decimal price = decimal.Parse(txtPrice.Text);
+            int quantity = int.Parse(nudQuantity.Value.ToString());
+            decimal total = price * quantity;
 
+            // Get the index of the selected row
+            int rowIndex = dgvOrder.SelectedRows[0].Index;
+
+            // Update the values of the cells in the selected row
+            dgvOrder.Rows[rowIndex].Cells[0].Value = item; // Name
+            dgvOrder.Rows[rowIndex].Cells[1].Value = price; // Price
+            dgvOrder.Rows[rowIndex].Cells[2].Value = quantity; // Quantity
+            dgvOrder.Rows[rowIndex].Cells[3].Value = total; // Total
+            dgvOrder.Rows[rowIndex].Cells[4].Value = note; // Note
+            dgvOrder.Rows[rowIndex].Cells[5].Value = category; // Category
+
+            // Sum the total of the bill
+            decimal sum = 0;
+            for (int i = 0; i < dgvOrder.Rows.Count; i++)
+            {
+                sum += decimal.Parse(dgvOrder.Rows[i].Cells[3].Value.ToString());
+            }
+
+            txtTotal.Text = sum.ToString();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            // Check if a row is selected
+            if (dgvOrder.SelectedRows.Count > 0)
+            {
+                // Prompt the user to confirm the deletion
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this item?", "Confirmation", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    // Remove the selected row from the DataGridView control
+                    dgvOrder.Rows.Remove(dgvOrder.SelectedRows[0]);
+
+                    // Recalculate the total cost of the order
+                    decimal sum = 0;
+                    for (int i = 0; i < dgvOrder.Rows.Count; i++)
+                    {
+                        sum += decimal.Parse(dgvOrder.Rows[i].Cells[3].Value.ToString());
+                    }
+
+                    txtTotal.Text = sum.ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.", "Error");
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtTime.Text = DateTime.Now.ToString("h:mm:ss tt");
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            orderRepository = new OrderRepository();
+            orderDetailRepository = new OrderDetailRepository();
+            // Get the employee ID from the LoginForm
+            int employeeId = _id;
+
+            // Get the total cost of the order from the txtTotal TextBox
+            decimal totalCost = decimal.Parse(txtTotal.Text);
+
+            // Get the current date and time
+            DateTime date = DateTime.Now;
+
+            // Create a new Order object with the necessary information
+            Order newOrder = new Order
+            {
+                EmployeeId = employeeId,
+                StatusId = 2,
+                TotalMoney = totalCost,
+                Date = date
+            };
+
+            // Save the new order to the database
+            orderRepository.create(newOrder);
+
+            // Iterate through the rows in the dgvOrder DataGridView control
+            foreach (DataGridViewRow row in dgvOrder.Rows)
+            {
+                // Get the details of the item that was ordered from the row
+                string itemName = row.Cells[0].Value.ToString();
+                int quantity = int.Parse(row.Cells[2].Value.ToString());
+                string note = row.Cells[4].Value.ToString();
+
+                // Find the corresponding Item object in the database
+                Item orderedItem = itemRepository.getItemByName(itemName);
+
+                // Create a new OrderDetail object with the necessary information
+                OrderDetail orderDetail = new OrderDetail
+                {
+                    OrderId = newOrder.Id,
+                    ItemId = orderedItem.Id,
+                    Quantity = quantity,
+                    Note = note
+                };
+
+                // Save the new order detail to the database
+                orderDetailRepository.create(orderDetail);
+
+
+            }
+
+            // Display a success message or perform any other necessary actions
+            MessageBox.Show("Order successfully saved!");
+
+            /*
+                Bill Export
+             */
+
+            // create the text file
+
+            string filePath = @"D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\BillStorage\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".txt";
+            using (StreamWriter sw = new StreamWriter(filePath))
+            {
+                sw.WriteLine("Order made by " + _name);
+                sw.WriteLine("Time: " + DateTime.Now);
+                sw.WriteLine();
+                // write the header row
+                foreach (DataGridViewColumn column in dgvOrder.Columns)
+                {
+                    sw.Write(column.HeaderText + "\t\t");
+                }
+                sw.WriteLine();
+
+                // write the data rows
+                foreach (DataGridViewRow row in dgvOrder.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        sw.Write(cell.Value.ToString() + "\t");
+                    }
+                    sw.WriteLine();
+                }
+
+                sw.WriteLine("Total all: " + txtTotal.Text);
+            }
+
+            // inform the user that the bill has been exported
+            MessageBox.Show("The bill has been exported to:\n" + filePath);
+
+            //clear the datagridview
+            dgvOrder.Rows.Clear();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure to sign out?", "Alert", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Application.Restart();
+            }
+        }
+
+        
     }
 }

@@ -17,5 +17,11 @@ namespace Services.Repository
             item = this.getAll().FirstOrDefault(p => p.Id == id, null);
             return item;
         }
+        public Item getItemByName(string name)
+        {
+            Item item = new Item();
+            item = this.getAll().FirstOrDefault(p => p.Name == name, null);
+            return item;
+        }
     }
 }
