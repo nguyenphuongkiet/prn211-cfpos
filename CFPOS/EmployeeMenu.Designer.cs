@@ -396,10 +396,10 @@
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(175, 227);
+            btnLogout.Location = new Point(6, 235);
             btnLogout.Margin = new Padding(2, 1, 2, 1);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(117, 72);
+            btnLogout.Size = new Size(300, 72);
             btnLogout.TabIndex = 11;
             btnLogout.Text = "SIGN OUT";
             btnLogout.UseVisualStyleBackColor = true;
@@ -407,10 +407,10 @@
             // 
             // btnInfo
             // 
-            btnInfo.Location = new Point(22, 227);
+            btnInfo.Location = new Point(6, 13);
             btnInfo.Margin = new Padding(2, 1, 2, 1);
             btnInfo.Name = "btnInfo";
-            btnInfo.Size = new Size(117, 72);
+            btnInfo.Size = new Size(300, 72);
             btnInfo.TabIndex = 9;
             btnInfo.Text = "INFO EMP";
             btnInfo.UseVisualStyleBackColor = true;
