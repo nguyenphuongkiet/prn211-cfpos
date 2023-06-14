@@ -254,3 +254,6 @@ E:\PRN211\CFOS-PRN211\CFPOS\obj\Debug\net6.0-windows\refint\CFPOS.dll
 E:\PRN211\CFOS-PRN211\CFPOS\obj\Debug\net6.0-windows\CFPOS.pdb
 E:\PRN211\CFOS-PRN211\CFPOS\obj\Debug\net6.0-windows\CFPOS.genruntimeconfig.cache
 E:\PRN211\CFOS-PRN211\CFPOS\obj\Debug\net6.0-windows\ref\CFPOS.dll
+C:\Users\Quoc\Source\Repos\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeSchedule.resources
+C:\Users\Quoc\Source\Repos\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminDrinks.resources
+C:\Users\Quoc\Source\Repos\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.MainForm.resources
