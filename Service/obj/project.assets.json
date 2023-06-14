@@ -2630,19 +2630,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Quoc\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Quoc\\Source\\Repos\\prn211-cfpos\\Service\\Services.csproj",
+      "projectUniqueName": "E:\\PRN211\\cfos_prn211\\Service\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "C:\\Users\\Quoc\\Source\\Repos\\prn211-cfpos\\Service\\Services.csproj",
-      "packagesPath": "C:\\Users\\Quoc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Quoc\\Source\\Repos\\prn211-cfpos\\Service\\obj\\",
+      "projectPath": "E:\\PRN211\\cfos_prn211\\Service\\Services.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "E:\\PRN211\\cfos_prn211\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Quoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2713,7 +2713,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
