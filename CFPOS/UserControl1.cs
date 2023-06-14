@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CFPOS
 {
-    public partial class Menu : Form
+    public partial class UserControl1 : UserControl
     {
-        public Menu()
+        public UserControl1()
         {
             InitializeComponent();
         }
