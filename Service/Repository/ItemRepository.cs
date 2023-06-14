@@ -17,5 +17,20 @@ namespace Services.Repository
             item = this.getAll().FirstOrDefault(p => p.Id == id, null);
             return item;
         }
+
+        public void createItem(string name, string description, decimal? price, bool status , int categoryId)
+        {
+            Item item = new Item
+            {
+                Name = name,
+                Description = description,
+                Price = price,
+                Status = status,
+                CategoryId = categoryId
+            };
+
+            this.create(item);
+        }
+
     }
 }
