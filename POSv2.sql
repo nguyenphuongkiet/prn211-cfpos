@@ -1,7 +1,18 @@
-use master;
-drop database POS;
-create database POS;
-use POS;
+﻿RAISERROR('Creating POS database....',0,1)
+SET NOCOUNT ON
+GO
+
+USE [master];
+GO
+
+DROP DATABASE IF EXISTS POS
+GO
+
+CREATE DATABASE POS
+GO
+
+USE POS;
+GO
 
 create table Category (
 	ID int identity(1,1) primary key,
@@ -14,7 +25,7 @@ create table Item (
 	name nvarchar(100),
 	description nvarchar(255),
 	price decimal(10,3),
-	status bit,
+	status BIT DEFAULT 1,
 	category_id int
 )
 
@@ -87,20 +98,20 @@ alter table OrderDetails
 		foreign key (item_id) references Item(ID)
 
 INSERT INTO Category (name, status) VALUES
-(N'C� ph�', 1),
-(N'N??c ng?t', 1),
-(N'Tr�', 1),
-(N'Tr�ng mi?ng', 1)
+(N'Cà phê', 1),
+(N'Nước ngọt', 1),
+(N'Trà', 1),
+(N'Tráng miệng', 1)
 
 INSERT INTO Item (name, description, price, status, category_id) VALUES
-(N'C� ph� ?en', N'C� ph� ?en th?t s?', 25000, 1, 1),
-(N'C� ph� s?a', N'C� ph� s?a th?t s?', 30000, 1, 1),
-(N'Coca Cola', N'N??c ng?t c� ga v? coca cola', 20000, 1, 2),
-(N'Pepsi', N'N??c ng?t c� ga v? pepsi', 18000, 1, 2),
-(N'Tr� ?�o', N'Tr� ?�o th?t s?', 20000, 1, 3),
-(N'Tr� xanh', N'Tr� xanh t??i', 20000, 1, 3),
-(N'B�nh flan', N'B�nh flan tr?ng ???ng', 15000, 1, 4),
-(N'Ch� b?t l?c', N'Ch� b?t l?c h?t sen', 25000, 1, 4)
+(N'Cà phê đen', N'Cà phê đen thật sự', 25000, 1, 1),
+(N'Cà phê sữa', N'Cà phê sữa thật sự', 30000, 1, 1),
+(N'Coca Cola', N'Nước ngọt có ga vị coca cola', 20000, 1, 2),
+(N'Pepsi', N'Nước ngọt có ga vị pepsi', 18000, 1, 2),
+(N'Trà đào', N'Trà đào thật sự', 20000, 1, 3),
+(N'Trà xanh', N'Trà xanh tươi', 20000, 1, 3),
+(N'Bánh flan', N'Bánh flan trứng đường', 15000, 1, 4),
+(N'Chè bột lọc', N'Chè bột lọc hạt sen', 25000, 1, 4)
 
 INSERT INTO Schedule (time_start, time_end, date, status) VALUES
 (8, 21, 'Monday', 1),
@@ -116,9 +127,9 @@ INSERT INTO Role (role_name) VALUES
 ('Employee')
 
 INSERT INTO Account (username, password, fullname, date_of_birth, description, role_id, status) VALUES
-('employe01', '123',N'Nguy?n V?n An', '1990-01-01', N'Nh�n vi�n qu�n', 2, 1),
-('employe02', '123',N'Tr?n Th? B�ch', '1988-12-31', N'Nh�n vi�n qu�n', 2, 1),
-('manager01', '123',N'L� Qu?c C??ng', '1995-06-10', N'Qu?n tr? vi�n h? th?ng', 1, 1)
+('employe01', '123',N'Nguyễn Văn An', '1990-01-01', N'Nhân viên quán', 2, 1),
+('employe02', '123',N'Trần Thị Bích', '1988-12-31', N'Nhân viên quán', 2, 1),
+('manager01', '123',N'Lê Quốc Cường', '1995-06-10', N'Quản trị viên hệ thống', 1, 1)
 
 INSERT INTO AccountSchedule (account_id, schedule_id) VALUES
 (1, 1),
@@ -135,9 +146,9 @@ INSERT INTO AccountSchedule (account_id, schedule_id) VALUES
 (3, 4)
 
 INSERT INTO Status (status) VALUES
-('?ang ch?'),
-('?� thanh to�n'),
-('Hu? ??n h�ng')
+('Đang chờ'),
+('Đã thanh toán'),
+('Hủy đơn hàng')
 
 INSERT INTO Orders (employee_id, status_id, total_money, date) VALUES
 (1, 1, 50000, '2023-06-10 09:30:00'),
@@ -153,3 +164,7 @@ INSERT INTO OrderDetails (order_id, item_id, quantity, note) VALUES
 (3, 6, 1, N''),
 (4, 1, 1, N''),
 (4, 7, 2, N'')
+
+SET NOCOUNT OFF
+raiserror('The POS database in now ready for use.',0,1)
+GO

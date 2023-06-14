@@ -65,7 +65,7 @@ namespace CFPOS
 
         public void getData(Account account)
         {
-            
+
             account.Fullname = txtName.Text;
             var id = account.Id;
             int.TryParse(txtId.Text, out id);
@@ -97,5 +97,58 @@ namespace CFPOS
 
         }
 
+        private void dgvEmp_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var account = _listAccount.getAll().ToList()[dgvEmp.CurrentRow.Index];
+            txtId.Text = account.Id.ToString();
+            txtName.Text = account.Fullname;
+            txtPass.Text = account.Password;
+            txtDesc.Text = account.Description;
+            txtUser.Text = account.Username;
+            txtSalary.Text = account.Salary.ToString();
+            txtRoleid.Text = account.RoleId.ToString();
+            txtId.Enabled = false;
+            btnDel.Enabled = true;
+            btnEdit.Enabled = true;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            var account = _listAccount.getAll()[dgvEmp.CurrentRow.Index];
+            getData(account);
+            _listAccount.update(account);
+            txtId.Enabled = true;
+            btnEdit.Enabled = false;
+            btnDel.Enabled = false;
+            emptyForm();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            var account = _listAccount.getAll().ToList()[dgvEmp.CurrentRow.Index];
+            _listAccount.delete(account);
+            dgvEmp.DataSource = new BindingSource() { DataSource = _listAccount.getAll() };
+            emptyForm();
+        }
+
+        private void emptyForm()
+        {
+            txtId.Text = "";
+            txtName.Text = "";
+            txtPass.Text = "";
+            txtRoleid.Text = "";
+            txtDesc.Text = "";
+            txtSalary.Text = "";
+            txtUser.Text = "";
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string search = txtSearch.Text.ToLower();
+
+            //var check = _listAccount.GetAll().Where(x => x.BranchName.ToLower().Contains(search));
+            var check = _listAccount.getAll().Where(x => x.Username.ToLower().Contains(search));
+            dgvEmp.DataSource = new BindingSource() { DataSource = check };
+        }
     }
 }
