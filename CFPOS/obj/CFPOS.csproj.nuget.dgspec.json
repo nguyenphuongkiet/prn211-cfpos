@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Back-END .NET\\CFPOS\\CFPOS\\CFPOS.csproj": {}
+    "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\CFPOS\\CFPOS.csproj": {}
   },
   "projects": {
-    "D:\\Back-END .NET\\CFPOS\\CFPOS\\CFPOS.csproj": {
+    "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\CFPOS\\CFPOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Back-END .NET\\CFPOS\\CFPOS\\CFPOS.csproj",
+        "projectUniqueName": "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\CFPOS\\CFPOS.csproj",
         "projectName": "CFPOS",
-        "projectPath": "D:\\Back-END .NET\\CFPOS\\CFPOS\\CFPOS.csproj",
-        "packagesPath": "C:\\Users\\vsngh\\.nuget\\packages\\",
-        "outputPath": "D:\\Back-END .NET\\CFPOS\\CFPOS\\obj\\",
+        "projectPath": "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\CFPOS\\CFPOS.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\CFPOS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vsngh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\Back-END .NET\\CFPOS\\Service\\Services.csproj": {
-                "projectPath": "D:\\Back-END .NET\\CFPOS\\Service\\Services.csproj"
+              "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\Service\\Services.csproj": {
+                "projectPath": "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\Service\\Services.csproj"
               }
             }
           }
@@ -80,17 +85,21 @@
         }
       }
     },
-    "D:\\Back-END .NET\\CFPOS\\Service\\Services.csproj": {
+    "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\Service\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Back-END .NET\\CFPOS\\Service\\Services.csproj",
+        "projectUniqueName": "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\Service\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "D:\\Back-END .NET\\CFPOS\\Service\\Services.csproj",
-        "packagesPath": "C:\\Users\\vsngh\\.nuget\\packages\\",
-        "outputPath": "D:\\Back-END .NET\\CFPOS\\Service\\obj\\",
+        "projectPath": "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\Service\\Services.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "D:\\Semester 5\\PRN211\\Project\\prn211-cfpos\\Service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vsngh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,6 +107,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
