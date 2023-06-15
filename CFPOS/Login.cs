@@ -30,17 +30,27 @@ namespace CFPOS
             btnLogin.Enabled = false;
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            var check = accountService.getAll().FirstOrDefault(a => a.Username == username && a.Password == password);
-            int id = check.Id;
-            string name = check.Fullname;
-            if (check != null)
+            var checkEmployee = accountService.getAll().FirstOrDefault(a => a.Username == username && a.Password == password && a.RoleId == 2);
+            var checkAdmin = accountService.getAll().FirstOrDefault(a => a.Username == username && a.Password == password && a.RoleId == 1);
+
+            
+
+            if (checkEmployee != null)
             {
-                //login success
+                //check if employee logged in successful, pass the id and full to employeeMenu
+                int id = checkEmployee.Id;
+                string name = checkEmployee.Fullname;
+                //then forward to employeeMenu
                 this.Hide();
                 Form employee = new EmployeeMenu(id, name);
                 employee.ShowDialog();
-                // Set the UserId property to the ID of the logged-in account
                 
+            }
+            else if (checkAdmin != null){
+                //login success
+                this.Hide();
+                Form admin = new AdminMenu();
+                admin.ShowDialog();
             }
             else
             {
