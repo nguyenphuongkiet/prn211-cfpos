@@ -77,6 +77,20 @@ namespace CFPOS
                 AdminDrinks.Instance.BringToFront();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(AdminRevenue.Instance))
+            {
+                panelContainer.Controls.Add(AdminRevenue.Instance);
+                AdminRevenue.Instance.Dock = DockStyle.Fill;
+                AdminRevenue.Instance.BringToFront();
+            }
+            else
+            {
+                AdminRevenue.Instance.BringToFront();
+            }
+        }
     }
 
 }
