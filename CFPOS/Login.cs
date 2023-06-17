@@ -43,6 +43,7 @@ namespace CFPOS
                 //then forward to employeeMenu
                 this.Hide();
                 Form employee = new EmployeeMenu(id, name);
+                UserControl userControl = new ucEmployeeMenu(id, name);
                 employee.ShowDialog();
                 
             }

@@ -34,12 +34,12 @@ namespace CFPOS
         public AdminMenu()
         {
             InitializeComponent();
-            
+
         }
 
         private void AdminMenu_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace CFPOS
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
-            if(!panelContainer.Controls.Contains(EmployeeSchedule.Instance))
+            if (!panelContainer.Controls.Contains(EmployeeSchedule.Instance))
             {
                 panelContainer.Controls.Add(EmployeeSchedule.Instance);
                 EmployeeSchedule.Instance.Dock = DockStyle.Fill;
@@ -62,6 +62,20 @@ namespace CFPOS
                 EmployeeSchedule.Instance.BringToFront();
             }
 
+        }
+
+        private void btnAdminDrinks_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(AdminDrinks.Instance))
+            {
+                panelContainer.Controls.Add(AdminDrinks.Instance);
+                AdminDrinks.Instance.Dock = DockStyle.Fill;
+                AdminDrinks.Instance.BringToFront();
+            }
+            else
+            {
+                AdminDrinks.Instance.BringToFront();
+            }
         }
     }
 

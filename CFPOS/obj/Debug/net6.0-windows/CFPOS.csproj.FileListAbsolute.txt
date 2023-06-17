@@ -125,6 +125,73 @@ D:\Back-END .NET\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.pdb
 D:\Back-END .NET\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.genruntimeconfig.cache
 D:\Back-END .NET\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\ref\CFPOS.dll
 D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminMenu.resources
+<<<<<<< HEAD
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\CFPOS.exe
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\appsettings.json
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\CFPOS.deps.json
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\CFPOS.runtimeconfig.json
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\CFPOS.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\CFPOS.pdb
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Azure.Core.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Azure.Identity.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\FluentValidation.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Services.dll
+D:\Back-END .NET\CFPOS\CFPOS\bin\Debug\net6.0-windows\Services.pdb
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.csproj.AssemblyReference.cache
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminMenu.resources
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeManage.resources
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeMenu.resources
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.Login.resources
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.csproj.GenerateResource.cache
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.GeneratedMSBuildEditorConfig.editorconfig
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.AssemblyInfoInputs.cache
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.AssemblyInfo.cs
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.csproj.CoreCompileInputs.cache
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.csproj.CopyComplete
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.dll
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\refint\CFPOS.dll
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.pdb
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.genruntimeconfig.cache
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\ref\CFPOS.dll
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.UserControl1.resources
+=======
 C:\Users\Quoc\source\repos\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.csproj.AssemblyReference.cache
 C:\Users\Quoc\source\repos\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminMenu.resources
 C:\Users\Quoc\source\repos\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeMenu.resources
@@ -255,3 +322,83 @@ E:\PRN211\CFOS-PRN211\CFPOS\obj\Debug\net6.0-windows\CFPOS.pdb
 E:\PRN211\CFOS-PRN211\CFPOS\obj\Debug\net6.0-windows\CFPOS.genruntimeconfig.cache
 E:\PRN211\CFOS-PRN211\CFPOS\obj\Debug\net6.0-windows\ref\CFPOS.dll
 D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeSchedule.resources
+>>>>>>> aec551ace88bf769a60ad9123763bdfe3f1fa1b5
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeSchedule.resources
+C:\Users\Quoc\Source\Repos\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeSchedule.resources
+C:\Users\Quoc\Source\Repos\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminDrinks.resources
+C:\Users\Quoc\Source\Repos\prn211-cfpos\CFPOS\obj\Debug\net6.0-windows\CFPOS.MainForm.resources
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\CFPOS.exe
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\appsettings.json
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\CFPOS.deps.json
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\CFPOS.runtimeconfig.json
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\CFPOS.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\CFPOS.pdb
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Azure.Core.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Azure.Identity.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\FluentValidation.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Services.dll
+E:\PRN211\cfos_prn211\CFPOS\bin\Debug\net6.0-windows\Services.pdb
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.csproj.AssemblyReference.cache
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminDrinks.resources
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminMenu.resources
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeMenu.resources
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeSchedule.resources
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.Login.resources
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.Menu.resources
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.csproj.GenerateResource.cache
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.GeneratedMSBuildEditorConfig.editorconfig
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.AssemblyInfoInputs.cache
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.AssemblyInfo.cs
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.csproj.CoreCompileInputs.cache
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.csproj.CopyComplete
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.dll
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\refint\CFPOS.dll
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.pdb
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.genruntimeconfig.cache
+E:\PRN211\cfos_prn211\CFPOS\obj\Debug\net6.0-windows\ref\CFPOS.dll
+>>>>>>> e943af85bcce0a18b73c3c02b783caf0970b28f7
+D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminDrinks.resources
+>>>>>>> d21a05ee73a3610fc7cc099ff037378bc72948d0
+D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminDrinks.resources
+D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeManage.resources
+D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.UserControl1.resources
+D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.ucEmployeeMenu.resources
+D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.Properties.Resources.resources
+D:\FPTU2022_2025\SECOND YEAR\SUMMER2023\Backend .NET\Source\CFPOS\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.ucWelcome.resources
