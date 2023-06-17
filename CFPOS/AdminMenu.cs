@@ -77,6 +77,13 @@ namespace CFPOS
                 AdminDrinks.Instance.BringToFront();
             }
         }
+
+        private void btnEmp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form emp = new EmployeeManage();
+            emp.ShowDialog();
+        }
     }
 
 }

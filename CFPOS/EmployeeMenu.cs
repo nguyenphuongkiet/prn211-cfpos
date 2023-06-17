@@ -15,6 +15,8 @@ namespace CFPOS
 {
     public partial class EmployeeMenu : Form
     {
+        private int _id;
+        private string _name;
         CategoryRepository categoryRepository;
         ItemRepository itemRepository;
         OrderDetailRepository orderDetailRepository;
@@ -22,9 +24,13 @@ namespace CFPOS
 
         //TableRepository tableRepository;
 
-        public EmployeeMenu()
+        public EmployeeMenu(int id, string name)
         {
             InitializeComponent();
+            //get id of user after login
+            _id = id;
+            //get id of the user login and add it to txtName 
+            _name = name;
 
             LoadItems();
 
@@ -111,6 +117,9 @@ namespace CFPOS
             // Reset the table selection and clear the DataGridView control to prepare for the next customer
         }
 
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

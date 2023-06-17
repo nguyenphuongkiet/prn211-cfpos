@@ -1,4 +1,5 @@
-﻿using Services.Models;
+﻿using FluentValidation.Results;
+using Services.Models;
 using Services.Repository;
 using System;
 using System.Collections.Generic;
@@ -10,17 +11,42 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CFPOS
 {
     public partial class EmployeeManage : Form
     {
+        private int _id;
+        
+
         AccountRepository _listAccount;
         List<Account> _list;
+        BindingList<string> errors = new BindingList<string>();
+
 
         public EmployeeManage()
         {
             InitializeComponent();
+            loadInitData();
+
+        }
+
+        public EmployeeManage(int id)
+        {
+            _id = id;
+        }
+        private void loadInitDataEmp(int _id) 
+        {
+            var checkEmployee = _listAccount.getAll().FirstOrDefault(a => a.Id == _id);
+            dgvEmp.DataSource = new BindingSource() { DataSource = checkEmployee };
+
+            showVisible();
+
+        }
+
+        private void loadInitData()
+        {
             _listAccount = new AccountRepository();
             _list = new List<Account>();
             _list = _listAccount.getAll();
@@ -28,9 +54,9 @@ namespace CFPOS
 
             showVisible();
 
+            lbError.DataSource = errors;
         }
-
-        public void showVisible()
+        private void showVisible()
         {
             DataGridViewBand band = dgvEmp.Columns[7];
             DataGridViewBand band1 = dgvEmp.Columns[9];
@@ -55,12 +81,30 @@ namespace CFPOS
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var account = new Account();
-            getData(account);
+            errors.Clear();
+            AccountValidation validator = new AccountValidation();
+            ValidationResult result = validator.Validate(account);
+            if (!result.IsValid)
+            {
+                foreach (ValidationFailure failure in result.Errors)
+                {
+                    errors.Add($"{failure.PropertyName}: {failure.ErrorMessage}");
+                }
+            }
+            else
+            {
+                // i want to function attribure run here
 
-            _listAccount.create(account);
+                getData(account);
 
-            dgvEmp.DataSource = new BindingSource() { DataSource = _listAccount.getAll() };
-            showVisible();
+                _listAccount.create(account);
+
+                dgvEmp.DataSource = new BindingSource() { DataSource = _listAccount.getAll() };
+                showVisible();
+                emptyErrorsSuccess();
+
+            }
+
         }
 
         public void getData(Account account)
@@ -115,20 +159,53 @@ namespace CFPOS
         private void btnEdit_Click(object sender, EventArgs e)
         {
             var account = _listAccount.getAll()[dgvEmp.CurrentRow.Index];
-            getData(account);
-            _listAccount.update(account);
-            txtId.Enabled = true;
-            btnEdit.Enabled = false;
-            btnDel.Enabled = false;
-            emptyForm();
+            errors.Clear();
+            AccountValidation validator = new AccountValidation();
+            ValidationResult result = validator.Validate(account);
+            if (!result.IsValid)
+            {
+                foreach (ValidationFailure failure in result.Errors)
+                {
+                    errors.Add($"{failure.PropertyName}: {failure.ErrorMessage}");
+                }
+            }
+            else
+            {
+                // i want to function attribure run here
+                getData(account);
+                _listAccount.update(account);
+                txtId.Enabled = true;
+                btnEdit.Enabled = false;
+                btnDel.Enabled = false;
+                emptyForm();
+                emptyErrorsSuccess();
+            }
+
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
             var account = _listAccount.getAll().ToList()[dgvEmp.CurrentRow.Index];
-            _listAccount.delete(account);
-            dgvEmp.DataSource = new BindingSource() { DataSource = _listAccount.getAll() };
-            emptyForm();
+
+            AccountValidation validator = new AccountValidation();
+            ValidationResult result = validator.Validate(account);
+            if (!result.IsValid)
+            {
+                foreach (ValidationFailure failure in result.Errors)
+                {
+                    errors.Add($"{failure.PropertyName}: {failure.ErrorMessage}");
+                }
+            }
+            else
+            {
+                // i want to function attribure run here
+
+                _listAccount.delete(account);
+                dgvEmp.DataSource = new BindingSource() { DataSource = _listAccount.getAll() };
+                emptyForm();
+                emptyErrorsSuccess();
+            }
+
         }
 
         private void emptyForm()
@@ -146,9 +223,31 @@ namespace CFPOS
         {
             string search = txtSearch.Text.ToLower();
 
-            //var check = _listAccount.GetAll().Where(x => x.BranchName.ToLower().Contains(search));
             var check = _listAccount.getAll().Where(x => x.Username.ToLower().Contains(search));
             dgvEmp.DataSource = new BindingSource() { DataSource = check };
+        }
+
+        private void accValidate(Account account /* i want to add function attribute here*/)
+        {
+            AccountValidation validator = new AccountValidation();
+            ValidationResult result = validator.Validate(account);
+            if (!result.IsValid)
+            {
+                foreach (ValidationFailure failure in result.Errors)
+                {
+                    errors.Add($"{failure.PropertyName}: {failure.ErrorMessage}");
+                }
+            }
+            else
+            {
+                // i want to function attribure run here
+            }
+        }
+
+        private void emptyErrorsSuccess()
+        {
+            errors.Clear();
+            errors.Add("Success");
         }
     }
 }
