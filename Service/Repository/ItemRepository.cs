@@ -18,6 +18,13 @@ namespace Services.Repository
             return item;
         }
 
+        public Item getItemByName(string name)
+        {
+            Item item = new Item();
+            item = this.getAll().FirstOrDefault(p => p.Name == name, null);
+            return item;
+        }
+
         public void createItem(string name, string description, decimal? price, bool status , int categoryId)
         {
             Item item = new Item

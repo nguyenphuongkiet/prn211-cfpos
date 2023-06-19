@@ -78,11 +78,18 @@ namespace CFPOS
             }
         }
 
-        private void btnEmp_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form emp = new EmployeeManage();
-            emp.ShowDialog();
+            if (!panelContainer.Controls.Contains(AdminRevenue.Instance))
+            {
+                panelContainer.Controls.Add(AdminRevenue.Instance);
+                AdminRevenue.Instance.Dock = DockStyle.Fill;
+                AdminRevenue.Instance.BringToFront();
+            }
+            else
+            {
+                AdminRevenue.Instance.BringToFront();
+            }
         }
     }
 

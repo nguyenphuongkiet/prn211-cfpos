@@ -34,7 +34,7 @@
             btnSchedule = new Button();
             button3 = new Button();
             btnAdminDrinks = new Button();
-            btnEmp = new Button();
+            button1 = new Button();
             panelContainer = new Panel();
             panelTab.SuspendLayout();
             SuspendLayout();
@@ -46,29 +46,29 @@
             panelTab.Controls.Add(btnSchedule);
             panelTab.Controls.Add(button3);
             panelTab.Controls.Add(btnAdminDrinks);
-            panelTab.Controls.Add(btnEmp);
-            panelTab.Location = new Point(11, 13);
-            panelTab.Margin = new Padding(4, 2, 4, 2);
+            panelTab.Controls.Add(button1);
+            panelTab.Location = new Point(7, 8);
+            panelTab.Margin = new Padding(2, 1, 2, 1);
             panelTab.Name = "panelTab";
-            panelTab.Size = new Size(245, 932);
+            panelTab.Size = new Size(151, 583);
             panelTab.TabIndex = 0;
             // 
             // button6
             // 
-            button6.Location = new Point(28, 791);
-            button6.Margin = new Padding(4, 2, 4, 2);
+            button6.Location = new Point(17, 495);
+            button6.Margin = new Padding(2, 1, 2, 1);
             button6.Name = "button6";
-            button6.Size = new Size(188, 117);
+            button6.Size = new Size(115, 73);
             button6.TabIndex = 5;
             button6.Text = "ĐĂNG XUẤT";
             button6.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            button5.Location = new Point(28, 646);
-            button5.Margin = new Padding(4, 2, 4, 2);
+            button5.Location = new Point(17, 404);
+            button5.Margin = new Padding(2, 1, 2, 1);
             button5.Name = "button5";
-            button5.Size = new Size(188, 117);
+            button5.Size = new Size(115, 73);
             button5.TabIndex = 4;
             button5.Text = "IN PROGRESS";
             button5.UseVisualStyleBackColor = true;
@@ -76,10 +76,10 @@
             // 
             // btnSchedule
             // 
-            btnSchedule.Location = new Point(28, 499);
-            btnSchedule.Margin = new Padding(4, 2, 4, 2);
+            btnSchedule.Location = new Point(17, 312);
+            btnSchedule.Margin = new Padding(2, 1, 2, 1);
             btnSchedule.Name = "btnSchedule";
-            btnSchedule.Size = new Size(188, 117);
+            btnSchedule.Size = new Size(115, 73);
             btnSchedule.TabIndex = 3;
             btnSchedule.Text = "CA TRỰC";
             btnSchedule.UseVisualStyleBackColor = true;
@@ -87,52 +87,52 @@
             // 
             // button3
             // 
-            button3.Location = new Point(28, 350);
-            button3.Margin = new Padding(4, 2, 4, 2);
+            button3.Location = new Point(17, 219);
+            button3.Margin = new Padding(2, 1, 2, 1);
             button3.Name = "button3";
-            button3.Size = new Size(188, 117);
+            button3.Size = new Size(115, 73);
             button3.TabIndex = 2;
             button3.Text = "DOANH THU";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // btnAdminDrinks
             // 
-            btnAdminDrinks.Location = new Point(28, 190);
-            btnAdminDrinks.Margin = new Padding(4, 2, 4, 2);
+            btnAdminDrinks.Location = new Point(17, 119);
+            btnAdminDrinks.Margin = new Padding(2, 1, 2, 1);
             btnAdminDrinks.Name = "btnAdminDrinks";
-            btnAdminDrinks.Size = new Size(188, 117);
+            btnAdminDrinks.Size = new Size(115, 73);
             btnAdminDrinks.TabIndex = 1;
             btnAdminDrinks.Text = "ĐỒ UỐNG";
             btnAdminDrinks.UseVisualStyleBackColor = true;
             btnAdminDrinks.Click += btnAdminDrinks_Click;
             // 
-            // btnEmp
+            // button1
             // 
-            btnEmp.Location = new Point(28, 30);
-            btnEmp.Margin = new Padding(4, 2, 4, 2);
-            btnEmp.Name = "btnEmp";
-            btnEmp.Size = new Size(188, 117);
-            btnEmp.TabIndex = 0;
-            btnEmp.Text = "NHÂN VIÊN";
-            btnEmp.UseVisualStyleBackColor = true;
-            btnEmp.Click += btnEmp_Click;
+            button1.Location = new Point(17, 19);
+            button1.Margin = new Padding(2, 1, 2, 1);
+            button1.Name = "button1";
+            button1.Size = new Size(115, 73);
+            button1.TabIndex = 0;
+            button1.Text = "NHÂN VIÊN";
+            button1.UseVisualStyleBackColor = true;
             // 
             // panelContainer
             // 
-            panelContainer.Location = new Point(288, 15);
-            panelContainer.Margin = new Padding(4, 4, 4, 4);
+            panelContainer.Location = new Point(177, 9);
+            panelContainer.Margin = new Padding(2, 3, 2, 3);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(1768, 1342);
+            panelContainer.Size = new Size(1088, 839);
             panelContainer.TabIndex = 1;
             // 
             // AdminMenu
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(2279, 1291);
+            ClientSize = new Size(1402, 807);
             Controls.Add(panelContainer);
             Controls.Add(panelTab);
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "AdminMenu";
             Text = "AdminMenu";
             panelTab.ResumeLayout(false);
@@ -142,7 +142,7 @@
         #endregion
 
         private Panel panelTab;
-        private Button btnEmp;
+        private Button button1;
         private Button button5;
         private Button btnSchedule;
         private Button button3;

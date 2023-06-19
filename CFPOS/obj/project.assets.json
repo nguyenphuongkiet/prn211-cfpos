@@ -2577,25 +2577,23 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "FluentValidation >= 11.5.2",
-      "Microsoft.Extensions.Configuration >= 5.0.0",
-      "Microsoft.Extensions.Configuration.Json >= 5.0.0",
       "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vsngh\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Back-END .NET\\CFPOS\\CFPOS\\CFPOS.csproj",
+      "projectUniqueName": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj",
       "projectName": "CFPOS",
-      "projectPath": "D:\\Back-END .NET\\CFPOS\\CFPOS\\CFPOS.csproj",
-      "packagesPath": "C:\\Users\\vsngh\\.nuget\\packages\\",
-      "outputPath": "D:\\Back-END .NET\\CFPOS\\CFPOS\\obj\\",
+      "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vsngh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2609,8 +2607,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\Back-END .NET\\CFPOS\\Service\\Services.csproj": {
-              "projectPath": "D:\\Back-END .NET\\CFPOS\\Service\\Services.csproj"
+            "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj": {
+              "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj"
             }
           }
         }
@@ -2628,14 +2626,6 @@
           "FluentValidation": {
             "target": "Package",
             "version": "[11.5.2, )"
-          },
-          "Microsoft.Extensions.Configuration": {
-            "target": "Package",
-            "version": "[5.0.0, )"
-          },
-          "Microsoft.Extensions.Configuration.Json": {
-            "target": "Package",
-            "version": "[5.0.0, )"
           }
         },
         "imports": [
@@ -2660,13 +2650,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Back-END .NET\\CFPOS\\CFPOS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace CFPOS
 {
+
     public partial class Login : Form
     {
+        
         POSContext _context;
         AccountRepository accountService;
         public Login()
@@ -31,7 +33,7 @@ namespace CFPOS
             var checkEmployee = accountService.getAll().FirstOrDefault(a => a.Username == username && a.Password == password && a.RoleId == 2);
             var checkAdmin = accountService.getAll().FirstOrDefault(a => a.Username == username && a.Password == password && a.RoleId == 1);
 
-
+            
 
             if (checkEmployee != null)
             {
@@ -41,11 +43,11 @@ namespace CFPOS
                 //then forward to employeeMenu
                 this.Hide();
                 Form employee = new EmployeeMenu(id, name);
+                UserControl userControl = new ucEmployeeMenu(id, name);
                 employee.ShowDialog();
-
+                
             }
-            else if (checkAdmin != null)
-            {
+            else if (checkAdmin != null){
                 //login success
                 this.Hide();
                 Form admin = new AdminMenu();

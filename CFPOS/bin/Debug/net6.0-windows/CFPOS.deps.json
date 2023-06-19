@@ -9,8 +9,6 @@
       "CFPOS/1.0.0": {
         "dependencies": {
           "FluentValidation": "11.5.2",
-          "Microsoft.Extensions.Configuration": "5.0.0",
-          "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Services": "1.0.0"
         },
         "runtime": {
