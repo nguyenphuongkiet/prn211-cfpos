@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
@@ -24,6 +23,7 @@ namespace Services.Models
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<Resource> Resources { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Schedule> Schedules { get; set; }
         public virtual DbSet<Status> Statuses { get; set; }
@@ -33,23 +33,13 @@ namespace Services.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer(GetConnectionString());
+                optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=12345;database=POS;TrustServerCertificate=True");
             }
         }
-        private string GetConnectionString()
-        {
-            IConfiguration config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", true, true)
-                .Build();
-            var strConn = config["ConnectionStrings:POSDB"];
-            return strConn;
-        }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+            modelBuilder.HasAnnotation("Relational:Collation", "Vietnamese_CI_AS");
 
             modelBuilder.Entity<Account>(entity =>
             {
@@ -94,7 +84,7 @@ namespace Services.Models
             modelBuilder.Entity<AccountSchedule>(entity =>
             {
                 entity.HasKey(e => new { e.AccountId, e.ScheduleId })
-                    .HasName("PK__AccountS__AAE48A6BD6D7BE80");
+                    .HasName("PK__AccountS__AAE48A6BFFCB60B3");
 
                 entity.ToTable("AccountSchedule");
 
@@ -206,6 +196,24 @@ namespace Services.Models
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
                     .HasConstraintName("FK__OrderDeta__order__4BAC3F29");
+            });
+
+            modelBuilder.Entity<Resource>(entity =>
+            {
+                entity.ToTable("resource");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(100)
+                    .HasColumnName("description");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .HasColumnName("name");
+
+                entity.Property(e => e.Quantity).HasColumnName("quantity");
             });
 
             modelBuilder.Entity<Role>(entity =>
