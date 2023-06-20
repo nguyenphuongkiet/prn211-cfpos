@@ -16,6 +16,9 @@
     <Compile Update="EmployeeSchedule.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="EmpManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>

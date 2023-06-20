@@ -2581,19 +2581,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\vsngh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj",
+      "projectUniqueName": "D:\\Back-END .NET\\CFPOS\\CFPOS\\CFPOS.csproj",
       "projectName": "CFPOS",
-      "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\obj\\",
+      "projectPath": "D:\\Back-END .NET\\CFPOS\\CFPOS\\CFPOS.csproj",
+      "packagesPath": "C:\\Users\\vsngh\\.nuget\\packages\\",
+      "outputPath": "D:\\Back-END .NET\\CFPOS\\CFPOS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vsngh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2607,8 +2607,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj": {
-              "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj"
+            "D:\\Back-END .NET\\CFPOS\\Service\\Services.csproj": {
+              "projectPath": "D:\\Back-END .NET\\CFPOS\\Service\\Services.csproj"
             }
           }
         }

@@ -76,5 +76,19 @@ namespace CFPOS
                 ucEmployeeMenu.Instance(_id, _name).BringToFront();
             }
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(EmpManage.InstanceEmp(_id)))
+            {
+                panelContainer.Controls.Add(EmpManage.InstanceEmp(_id));
+                EmpManage.InstanceEmp(_id).Dock = DockStyle.Fill;
+                EmpManage.InstanceEmp(_id).BringToFront();
+            }
+            else
+            {
+                EmpManage.Instance.BringToFront();
+            }
+        }
     }
 }

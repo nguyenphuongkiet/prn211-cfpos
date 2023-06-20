@@ -91,6 +91,20 @@ namespace CFPOS
                 AdminRevenue.Instance.BringToFront();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(EmpManage.Instance))
+            {
+                panelContainer.Controls.Add(EmpManage.Instance);
+                EmpManage.Instance.Dock = DockStyle.Fill;
+                EmpManage.Instance.BringToFront();
+            }
+            else
+            {
+                EmpManage.Instance.BringToFront();
+            }
+        }
     }
 
 }

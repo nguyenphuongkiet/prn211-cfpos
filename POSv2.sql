@@ -83,6 +83,13 @@ create table OrderDetails(
 
 )
 
+CREATE TABLE resource (
+    ID int identity(1,1) primary key,
+    name TEXT NOT NULL,
+    quantity INTEGER NOT NULL,
+    description TEXT
+)
+
 alter table Item 
 	add foreign key (category_id) references Category(ID)
 alter table Account 
@@ -168,3 +175,14 @@ INSERT INTO OrderDetails (order_id, item_id, quantity, note) VALUES
 SET NOCOUNT OFF
 raiserror('The POS database in now ready for use.',0,1)
 GO
+
+INSERT INTO resource (name, quantity, description) VALUES ('Espresso', 50, 'A strong coffee made by forcing steam through ground coffee beans.');
+INSERT INTO resource (name, quantity, description) VALUES ('Cappuccino', 30, 'A coffee made with espresso and frothed milk.');
+INSERT INTO resource (name, quantity, description) VALUES ('Latte', 40, 'A coffee made with espresso and steamed milk.');
+INSERT INTO resource (name, quantity, description) VALUES ('Mocha', 20, 'A coffee made with espresso, steamed milk, and chocolate syrup.');
+INSERT INTO resource (name, quantity, description) VALUES ('Americano', 25, 'A coffee made by adding hot water to espresso.');
+INSERT INTO resource (name, quantity, description) VALUES ('Macchiato', 15, 'A coffee made with espresso and a small amount of foamed milk.');
+INSERT INTO resource (name, quantity, description) VALUES ('Iced Coffee', 35, 'A coffee served cold with ice.');
+INSERT INTO resource (name, quantity, description) VALUES ('Frappuccino', 10, 'A blended coffee drink with ice and other ingredients such as whipped cream and flavored syrups.');
+INSERT INTO resource (name, quantity, description) VALUES ('Flat White', 5, 'A coffee made with espresso and steamed milk without froth.');
+INSERT INTO resource (name, quantity, description) VALUES ('Cortado', 8, 'A coffee made with espresso and an equal amount of steamed milk.');

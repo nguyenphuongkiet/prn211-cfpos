@@ -28,8 +28,7 @@ namespace CFPOS
 
             RuleFor(Account => Account.Username)
                 .Cascade(CascadeMode.StopOnFirstFailure)
-                .NotEmpty().WithMessage("Email address is required.")
-                .EmailAddress().WithMessage("A valid email address is required.");
+                .NotEmpty().WithMessage("Email address is required.");
 
             RuleFor(Account => Account.Password)
                 .Cascade(CascadeMode.StopOnFirstFailure)
