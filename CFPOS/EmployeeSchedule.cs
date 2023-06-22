@@ -110,7 +110,7 @@ namespace CFPOS
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Schedule schedule = new Schedule();
+            AdminSchedule schedule = new AdminSchedule();
 
             int.TryParse(txtIdCRUD.Text, out int id);
             int.TryParse(cbbScheduleId.SelectedValue.ToString(), out int scheduleId);

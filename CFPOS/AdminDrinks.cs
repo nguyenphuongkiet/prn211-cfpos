@@ -103,7 +103,7 @@ namespace CFPOS
                 var item = dgvAdminDrinks.Rows[e.RowIndex].DataBoundItem as Item;
                 if (item != null)
                 {
-                    var category = categoryRepository.getCategoryById(item.CategoryId);
+                    var category = categoryRepository.getCategoryById(item.CategoryId.Value);
                     if (category != null)
                     {
                         e.Value = category.Name;
@@ -115,7 +115,7 @@ namespace CFPOS
                 var item = dgvAdminDrinks.Rows[e.RowIndex].DataBoundItem as Item;
                 if (item != null)
                 {
-                    if (item.Status)
+                    if (item.Status.Value)
                     {
                         e.Value = "Available";
                     }

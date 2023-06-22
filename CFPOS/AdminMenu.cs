@@ -51,15 +51,15 @@ namespace CFPOS
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
-            if (!panelContainer.Controls.Contains(EmployeeSchedule.Instance))
+            if (!panelContainer.Controls.Contains(AdminSchedule.Instance))
             {
-                panelContainer.Controls.Add(EmployeeSchedule.Instance);
-                EmployeeSchedule.Instance.Dock = DockStyle.Fill;
-                EmployeeSchedule.Instance.BringToFront();
+                panelContainer.Controls.Add(AdminSchedule.Instance);
+                AdminSchedule.Instance.Dock = DockStyle.Fill;
+                AdminSchedule.Instance.BringToFront();
             }
             else
             {
-                EmployeeSchedule.Instance.BringToFront();
+                AdminSchedule.Instance.BringToFront();
             }
 
         }
@@ -103,6 +103,20 @@ namespace CFPOS
             else
             {
                 EmpManage.Instance.BringToFront();
+            }
+        }
+
+        private void btnAccountSchedule_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(EmployeeSchedule.Instance))
+            {
+                panelContainer.Controls.Add(EmployeeSchedule.Instance);
+                EmployeeSchedule.Instance.Dock = DockStyle.Fill;
+                EmployeeSchedule.Instance.BringToFront();
+            }
+            else
+            {
+                EmployeeSchedule.Instance.BringToFront();
             }
         }
     }

@@ -129,7 +129,7 @@ namespace CFPOS
                 string name = row.Cells[0].Value.ToString(); // Get the name of the selected item
 
                 // Find the category of the selected item
-                int categoryId = itemRepository.getItemByName(name).CategoryId;
+                int? categoryId = itemRepository.getItemByName(name).CategoryId;
 
                 // Set the selected category in cboCategory
                 cboCategory.SelectedValue = categoryId;

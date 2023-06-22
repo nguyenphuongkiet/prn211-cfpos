@@ -476,3 +476,13 @@ D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmpManage.resources
 D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.Properties.Resources.resources
 D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.ucEmployeeMenu.resources
 D:\Back-END .NET\CFPOS\CFPOS\obj\Debug\net6.0-windows\CFPOS.ucWelcome.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminDrinks.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminRevenue.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmployeeManage.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.EmpManage.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.Properties.Resources.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.ucEmployeeMenu.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.ucWelcome.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.UserControl1.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.Schedule.resources
+E:\PRN211\cfos-prn211\CFPOS\obj\Debug\net6.0-windows\CFPOS.AdminSchedule.resources
