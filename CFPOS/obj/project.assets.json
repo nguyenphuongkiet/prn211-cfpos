@@ -2586,11 +2586,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\PRN211\\cfos-prn211\\CFPOS\\CFPOS.csproj",
+      "projectUniqueName": "E:\\PRN211\\CFOS\\CFPOS\\CFPOS.csproj",
       "projectName": "CFPOS",
-      "projectPath": "E:\\PRN211\\cfos-prn211\\CFPOS\\CFPOS.csproj",
+      "projectPath": "E:\\PRN211\\CFOS\\CFPOS\\CFPOS.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "E:\\PRN211\\cfos-prn211\\CFPOS\\obj\\",
+      "outputPath": "E:\\PRN211\\CFOS\\CFPOS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2607,8 +2607,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "E:\\PRN211\\cfos-prn211\\Service\\Services.csproj": {
-              "projectPath": "E:\\PRN211\\cfos-prn211\\Service\\Services.csproj"
+            "E:\\PRN211\\CFOS\\Service\\Services.csproj": {
+              "projectPath": "E:\\PRN211\\CFOS\\Service\\Services.csproj"
             }
           }
         }

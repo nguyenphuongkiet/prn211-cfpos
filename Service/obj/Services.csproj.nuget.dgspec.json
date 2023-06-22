@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PRN211\\cfos-prn211\\Service\\Services.csproj": {}
+    "E:\\PRN211\\CFOS\\Service\\Services.csproj": {}
   },
   "projects": {
-    "E:\\PRN211\\cfos-prn211\\Service\\Services.csproj": {
+    "E:\\PRN211\\CFOS\\Service\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRN211\\cfos-prn211\\Service\\Services.csproj",
+        "projectUniqueName": "E:\\PRN211\\CFOS\\Service\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "E:\\PRN211\\cfos-prn211\\Service\\Services.csproj",
+        "projectPath": "E:\\PRN211\\CFOS\\Service\\Services.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "E:\\PRN211\\cfos-prn211\\Service\\obj\\",
+        "outputPath": "E:\\PRN211\\CFOS\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

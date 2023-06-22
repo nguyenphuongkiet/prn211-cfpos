@@ -33,15 +33,14 @@
             btnSearch = new Button();
             txtTimeStart = new TextBox();
             txtTimeEnd = new TextBox();
-            txtDate = new TextBox();
             cbbStatus = new ComboBox();
             btnAdd = new Button();
             btnUpdate = new Button();
-            btnDelete = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            cbbDate = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvSchedule).BeginInit();
             SuspendLayout();
             // 
@@ -54,6 +53,7 @@
             dgvSchedule.RowTemplate.Height = 33;
             dgvSchedule.Size = new Size(1229, 281);
             dgvSchedule.TabIndex = 0;
+            dgvSchedule.CellDoubleClick += dgvSchedule_CellDoubleClick;
             // 
             // txtSearch
             // 
@@ -68,8 +68,9 @@
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(112, 34);
             btnSearch.TabIndex = 2;
-            btnSearch.Text = "button1";
+            btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // txtTimeStart
             // 
@@ -85,15 +86,9 @@
             txtTimeEnd.Size = new Size(235, 31);
             txtTimeEnd.TabIndex = 4;
             // 
-            // txtDate
-            // 
-            txtDate.Location = new Point(711, 436);
-            txtDate.Name = "txtDate";
-            txtDate.Size = new Size(235, 31);
-            txtDate.TabIndex = 5;
-            // 
             // cbbStatus
             // 
+            cbbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbStatus.FormattingEnabled = true;
             cbbStatus.Location = new Point(711, 489);
             cbbStatus.Name = "cbbStatus";
@@ -108,6 +103,7 @@
             btnAdd.TabIndex = 7;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnUpdate
             // 
@@ -117,15 +113,7 @@
             btnUpdate.TabIndex = 8;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Location = new Point(1032, 468);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(121, 54);
-            btnDelete.TabIndex = 9;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // label1
             // 
@@ -164,25 +152,33 @@
             label4.TabIndex = 13;
             label4.Text = "Status";
             // 
-            // Schedule
+            // cbbDate
+            // 
+            cbbDate.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbDate.FormattingEnabled = true;
+            cbbDate.Location = new Point(712, 437);
+            cbbDate.Name = "cbbDate";
+            cbbDate.Size = new Size(234, 33);
+            cbbDate.TabIndex = 14;
+            // 
+            // AdminSchedule
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(cbbDate);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnAdd);
             Controls.Add(cbbStatus);
-            Controls.Add(txtDate);
             Controls.Add(txtTimeEnd);
             Controls.Add(txtTimeStart);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
             Controls.Add(dgvSchedule);
-            Name = "Schedule";
+            Name = "AdminSchedule";
             Size = new Size(1322, 555);
             ((System.ComponentModel.ISupportInitialize)dgvSchedule).EndInit();
             ResumeLayout(false);
@@ -196,7 +192,6 @@
         private Button btnSearch;
         private TextBox txtTimeStart;
         private TextBox txtTimeEnd;
-        private TextBox txtDate;
         private ComboBox cbbStatus;
         private Button btnAdd;
         private Button btnUpdate;
@@ -205,5 +200,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private ComboBox cbbDate;
     }
 }
