@@ -17,5 +17,10 @@ namespace Services.Models
         public bool? Status { get; set; }
 
         public virtual ICollection<Item> Items { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

@@ -149,6 +149,13 @@ namespace CFPOS
                     return;
                 }
 
+
+                if (itemPrice < 0)
+                {
+                    MessageBox.Show("Invalid input for Item Price. Please enter a > 0 value.", "Warning", MessageBoxButtons.OK);
+                    return;
+                }
+
                 if (!string.IsNullOrEmpty(txtItemId.Text))
                 {
                     MessageBox.Show("Do not fill in the ID box as it will be automatically marked", "Warning", MessageBoxButtons.OK);

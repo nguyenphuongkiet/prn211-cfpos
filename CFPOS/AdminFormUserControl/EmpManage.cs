@@ -1,4 +1,5 @@
-﻿using FluentValidation.Results;
+﻿using CFPOS.Validator;
+using FluentValidation.Results;
 using Services.Models;
 using Services.Repository;
 using System;

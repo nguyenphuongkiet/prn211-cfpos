@@ -7,11 +7,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace CFPOS
+namespace CFPOS.Validator
 {
     public class ScheduleValidator : AbstractValidator<Schedule>
     {
-        public ScheduleValidator() 
+        public ScheduleValidator()
         {
             RuleFor(Schedule => Schedule.TimeStart.Value)
                 .NotEmpty().WithMessage("Please enter time start")
@@ -31,7 +31,7 @@ namespace CFPOS
         private bool validateTime(int time)
         {
             bool check = true;
-            if(time < 0 || time > 24)
+            if (time < 0 || time > 24)
             {
                 check = false;
             }
@@ -42,7 +42,8 @@ namespace CFPOS
         private bool validateTimeStartAndEnd(int timeStart, int timeEnd)
         {
             bool check = false;
-            if (timeStart < timeEnd) { 
+            if (timeStart < timeEnd)
+            {
                 check = true;
             }
             return check;

@@ -46,8 +46,6 @@ namespace CFPOS
 
         private void LoadItems()
         {
-            // Query database to retrieve all available items
-            // Bind results to the ComboBox control
             categoryRepository = new CategoryRepository();
             itemRepository = new ItemRepository();
             cboCategory.DataSource = categoryRepository.getAll();
@@ -69,8 +67,8 @@ namespace CFPOS
             // Retrieve the selected item's price from the database using the item ID
             var selectedItem = itemRepository.getItemById(selectedItemId);
             var price = selectedItem.Price;
-
             txtPrice.Text = price.ToString();
+
         }
 
         private void CboCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -115,40 +113,7 @@ namespace CFPOS
             txtTotal.Text = sum.ToString();
         }
 
-        private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0) // Check if a valid row is selected
-            {
-                // Retrieve the list of all categories and bind it to cboCategory
-                List<Category> categories = categoryRepository.getAll();
-                cboCategory.DisplayMember = "Name";
-                cboCategory.ValueMember = "Id";
-                cboCategory.DataSource = categories;
 
-                DataGridViewRow row = dgvOrder.Rows[e.RowIndex];
-                string name = row.Cells[0].Value.ToString(); // Get the name of the selected item
-
-                // Find the category of the selected item
-                int? categoryId = itemRepository.getItemByName(name).CategoryId;
-
-                // Set the selected category in cboCategory
-                cboCategory.SelectedValue = categoryId;
-
-                // Bind the items under the selected category to cboItem
-                cboItem.DataSource = itemRepository.getAll().Where(a => a.CategoryId == categoryId).ToList();
-                cboItem.DisplayMember = "Name";
-                cboItem.ValueMember = "Id";
-
-                // Set the selected item in cboItem
-                cboItem.Text = name;
-
-                // Set the price, quantity and note in their respective controls
-                txtPrice.Text = row.Cells[1].Value.ToString();
-                nudQuantity.Value = int.Parse(row.Cells[2].Value.ToString());
-                txtNote.Text = row.Cells[4].Value.ToString();
-
-            }
-        }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -310,6 +275,41 @@ namespace CFPOS
 
             //clear the datagridview
             dgvOrder.Rows.Clear();
+        }
+
+        private void dgvOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Check if a valid row is selected
+            {
+                // Retrieve the list of all categories and bind it to cboCategory
+                List<Category> categories = categoryRepository.getAll();
+                cboCategory.DisplayMember = "Name";
+                cboCategory.ValueMember = "Id";
+                cboCategory.DataSource = categories;
+
+                DataGridViewRow row = dgvOrder.Rows[e.RowIndex];
+                string name = row.Cells[0].Value.ToString(); // Get the name of the selected item
+
+                // Find the category of the selected item
+                int? categoryId = itemRepository.getItemByName(name).CategoryId;
+
+                // Set the selected category in cboCategory
+                cboCategory.SelectedValue = categoryId;
+
+                // Bind the items under the selected category to cboItem
+                cboItem.DataSource = itemRepository.getAll().Where(a => a.CategoryId == categoryId).ToList();
+                cboItem.DisplayMember = "Name";
+                cboItem.ValueMember = "Id";
+
+                // Set the selected item in cboItem
+                cboItem.Text = name;
+
+                // Set the price, quantity and note in their respective controls
+                txtPrice.Text = row.Cells[1].Value.ToString();
+                nudQuantity.Value = int.Parse(row.Cells[2].Value.ToString());
+                txtNote.Text = row.Cells[4].Value.ToString();
+
+            }
         }
     }
 }

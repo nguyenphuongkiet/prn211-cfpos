@@ -2581,19 +2581,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\PRN211\\CFOS\\CFPOS\\CFPOS.csproj",
+      "projectUniqueName": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj",
       "projectName": "CFPOS",
-      "projectPath": "E:\\PRN211\\CFOS\\CFPOS\\CFPOS.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "E:\\PRN211\\CFOS\\CFPOS\\obj\\",
+      "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\CFPOS.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\CFPOS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2607,8 +2607,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "E:\\PRN211\\CFOS\\Service\\Services.csproj": {
-              "projectPath": "E:\\PRN211\\CFOS\\Service\\Services.csproj"
+            "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj": {
+              "projectPath": "D:\\FPTU2022_2025\\SECOND YEAR\\SUMMER2023\\Backend .NET\\Source\\CFPOS\\CFPOS\\Service\\Services.csproj"
             }
           }
         }
@@ -2647,7 +2647,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

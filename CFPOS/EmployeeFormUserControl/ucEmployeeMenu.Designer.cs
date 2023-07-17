@@ -196,6 +196,7 @@
             dgvOrder.RowTemplate.Height = 41;
             dgvOrder.Size = new Size(571, 219);
             dgvOrder.TabIndex = 22;
+            dgvOrder.CellContentClick += dgvOrder_CellContentClick;
             // 
             // Column1
             // 

@@ -6,17 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CFPOS
+namespace CFPOS.Validator
 {
     internal class AccountValidation : AbstractValidator<Account>
     {
-        public AccountValidation() 
-        { 
-            RuleFor(Account => Account.Id)
-                .Cascade(CascadeMode.StopOnFirstFailure)
-                .NotEmpty().WithMessage("Id must not be null")
-                .GreaterThan(0).WithMessage("Id must be greater than 0");
-                
+        public AccountValidation()
+        {
+
             RuleFor(Account => Account.Fullname)
                 .Cascade(CascadeMode.StopOnFirstFailure)
                 .NotEmpty().WithMessage("Name must not be null")
@@ -46,7 +42,7 @@ namespace CFPOS
 
             RuleFor(Account => Account.Salary)
                 .Cascade(CascadeMode.StopOnFirstFailure)
-                .Must(x => x >= int.MinValue && x <= int.MaxValue).WithMessage("Salary must be numberic")
+                .Must(x => x >= int.MinValue && x <= int.MaxValue && x > 0).WithMessage("Salary must be numberic")
                 .NotEmpty().WithMessage("Password must not be null");
         }
 
@@ -54,7 +50,7 @@ namespace CFPOS
         {
             name = name.Replace(" ", "");
             name = name.Replace("-", "");
-            return name.All(Char.IsLetter);
+            return name.All(char.IsLetter);
         }
     }
 }
